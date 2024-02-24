@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="D:\web tech\wt ex 4\stylesheet1.css">
+</head>
+<body>
+    <h1>calculator</h1>
+    <div class="tab" style="align-items: center ;justify-content: center;">
+    <table border="5" style="color: black;border-radius: 10px;border-color: black;" >
+        <tr>
+            <td colspan="3"><input id="li" size="30" style="padding: 10px 10px;border: transparent; width: 90%;height: 60%;font-size: xx-large;" disabled></td>
+            <td><input type ="button" value="clr" onclick="clr()" ></td>
+        </tr>
+        <tr>
+            <td><input type ="button" value="7" onclick="send('7')"></td>
+            <td><input type ="button" value="8" onclick="send('8')"></td>
+            <td><input type ="button" value="9" onclick="send('9')"></td>
+            <td><input type ="button" value="*" onclick="send('*')"></td>
+        </tr>
+        <tr>
+            <td><input type ="button" value="4" onclick="send('4')"></td>
+            <td><input type ="button" value="5" onclick="send('5')"></td>
+            <td><input type ="button" value="6" onclick="send('6')"></td>
+            <td><input type ="button" value="+" onclick="send('+')"></td>
+          
+        </tr>
+        <tr>
+            <td><input type ="button" value="1" onclick="send('1')"></td>
+            <td><input type ="button" value="2" onclick="send('2')"></td>
+            <td><input type ="button" value="3" onclick="send('3')"></td>
+            <td><input type ="button" value="-" onclick="send('-')"></td>
+            
+        </tr>
+        <tr>
+            <td><input type ="button" value="00" onclick="send('00')"></td>
+            <td><input type ="button" value="0" onclick="send('0')"></td>
+            <td><input type ="button" value="/" onclick="send('/')"></td>
+            <td><input type ="button" value="=" onclick="calcu('=')"></td>
+            
+        </tr>
+
+    </table>
+    </div>
+    <script>
+        function send(value)
+        {
+            document.getElementById("li").value +=value;
+        }
+        function clr()
+        {
+            document.getElementById("li").value ="";
+        }
+        function calcu()
+        {
+            var p=document.getElementById("li").value;
+            var q=eval(p);
+            document.getElementById("li").value=q;
+        }
+
+    </script>
+</body>
+</html>
